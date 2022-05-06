@@ -12,6 +12,10 @@ class UnsupportedError(Exception):
 
 
 class Buffer:
+    """
+    A buffer is a special kind of buffered stream which also accounts
+    for misaligned reads and writes (e.g. bits being read and written).
+    """
 
     def __init__(self, initial_capacity: int = _INITIAL_CAPACITY, target: bytearray = None):
         # Length & position vars.
